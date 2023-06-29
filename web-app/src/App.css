@@ -1,0 +1,45 @@
+html, body {
+  width: 100%;
+}
+.App {
+  width: 100%;
+  display: flex;
+  background-color: #282c34;
+}
+
+main {
+  margin: 0 1em;
+  width: 100%;
+  max-width: 900px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+input {
+  display: block;
+  width: 100%;
+  margin: 0.5em 0;
+  border-radius: 0.5em;
+  padding: 0.5em;
+  font-size: 0.5em;
+  border: 1px solid white;
+}
+input[readonly] {
+  background-color: lightgray;
+  border: 1px solid black;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "name": "farmhash-modern-tests",
+  "private": true,
+  "dependencies": {
+    "farmhash-modern": "file:../farmhash-modern-0.0.0.tgz"
+  }
+}
