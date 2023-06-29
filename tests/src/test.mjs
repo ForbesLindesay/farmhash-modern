@@ -1,4 +1,5 @@
 import {strictEqual} from 'assert';
+import {randomBytes} from 'crypto';
 
 import * as farmhash from 'farmhash-modern';
 
@@ -10,3 +11,23 @@ strictEqual(
   ),
   -4106804224407357979n,
 );
+
+function jsBigQueryFingerprint(input) {
+  const fingerprint = farmhash.fingerprint64(input);
+
+  const unsigned = new BigUint64Array([fingerprint]);
+  const signed = new BigInt64Array(unsigned.buffer);
+
+  return signed[0];
+}
+
+const start = Date.now();
+let testCount = 0;
+while (Date.now() - start < 1_000) {
+  testCount++;
+  const input = randomBytes(128);
+  strictEqual(
+    farmhash.bigqueryFingerprint(input),
+    jsBigQueryFingerprint(input),
+  );
+}

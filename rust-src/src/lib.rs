@@ -1,6 +1,5 @@
 mod utils;
 
-use std::mem;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
@@ -19,7 +18,7 @@ pub fn fingerprint64(input: &[u8]) -> u64 {
 pub fn bigquery_fingerprint(input: &[u8]) -> i64 {
     utils::set_panic_hook();
     let fingerprint = farmhash::fingerprint64(&input);
-    unsafe { mem::transmute(fingerprint) }
+    fingerprint as i64
 }
 
 #[wasm_bindgen]
