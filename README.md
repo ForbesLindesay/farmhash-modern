@@ -6,7 +6,7 @@ The [existing farmhash npm packge](https://github.com/lovell/farmhash) works gre
 
 This WASM implementation is built using the [farmhash Rust Crate](https://crates.io/crates/farmhash). The 64-bit APIs use JavaScript's BigInt type to represent results. If you need a base-10 string, you can simply call `.toString()` on the result.
 
-[![Build Status](https://img.shields.io/github/workflow/status/ForbesLindesay/farmhash-modern/test.yml?branch=main&style=for-the-badge)](https://github.com/ForbesLindesay/farmhash-modern/actions?query=workflow%3ATest+branch%3Amain)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/ForbesLindesay/farmhash-modern/test.yml?event=push&style=for-the-badge)](https://github.com/ForbesLindesay/farmhash-modern/actions?query=workflow%3ATest+branch%3Amain)
 [![Rolling Versions](https://img.shields.io/badge/Rolling%20Versions-Enabled-brightgreen?style=for-the-badge)](https://rollingversions.com/ForbesLindesay/farmhash-modern)
 [![NPM version](https://img.shields.io/npm/v/farmhash-modern?style=for-the-badge)](https://www.npmjs.com/package/farmhash-modern)
 
