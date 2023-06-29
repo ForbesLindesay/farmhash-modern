@@ -2,6 +2,16 @@
   "name": "farmhash-modern",
   "version": "0.0.0",
   "description": "FarmHash functions compiled using Rust and WebAssembly to make them easy to use in node.js and the browser",
+  "keywords": [
+    "bigquery",
+    "farm_fingerprint",
+    "farmhash",
+    "fingerprint",
+    "hash",
+    "rust",
+    "wasm",
+    "webassembly"
+  ],
   "main": "lib/index.cjs",
   "module": "lib/index.mjs",
   "types": "lib/index.d.ts",
