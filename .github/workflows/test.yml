@@ -17,7 +17,8 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 18.x
-      - uses: jetli/wasm-pack-action@v0.4.0
+      - name: Install wasm-pack
+        run: curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
       - run: yarn install --frozen-lockfile
       - run: yarn build
       - run: yarn prettier:check
@@ -35,7 +36,8 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - uses: jetli/wasm-pack-action@v0.4.0
+      - name: Install wasm-pack
+        run: curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
       - run: yarn install --frozen-lockfile
       - run: yarn build
       - run: yarn test
