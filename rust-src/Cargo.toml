@@ -1,5 +1,5 @@
 [package]
-name = "farmhash-wasm"
+name = "farmhash-modern"
 version = "0.1.0"
 authors = ["Forbes Lindesay <forbes@lindesay.co.uk>"]
 edition = "2018"

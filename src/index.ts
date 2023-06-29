@@ -1,4 +1,4 @@
-import * as farmhash from '../bin/nodejs/farmhash_wasm.js';
+import * as farmhash from '../bin/nodejs/farmhash_modern.js';
 
 function asBuffer(input: Uint8Array | string): Uint8Array {
   if (typeof input === 'string') {
